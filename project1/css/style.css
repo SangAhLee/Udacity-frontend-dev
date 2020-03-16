@@ -1,0 +1,181 @@
+html {
+    font-size: 10px; 
+    font-family: 'Roboto', 'Noto Serif','Noto Sans KR', serif, sans-serif;
+}
+
+body {    
+    width: 100vw;
+    height: auto;
+    background: #fffff8;
+    color:#444;
+    padding: 1px;
+    display: flex;
+    font-family: 'Roboto';
+}
+
+.container {
+    width: 90%;
+}
+
+.box {
+    width: 100%;
+    /* border: 1px solid #444; */
+}
+
+/* header */
+.header {    
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    background: #0b504f;
+    color: white;    
+    font-size: 1rem;
+    /*
+    dark green: #0b504f
+    mint: #2fd3d3; 
+    */
+}
+
+.header >* {
+    margin: 10px;
+}
+/*
+.header>div:nth-child(4) {    
+   margin-left: auto;   
+} */
+
+.header>div:nth-child(1) {    
+    margin-right: auto;
+ }
+
+/* sidebar */
+.sidebar {    
+    font-size: 1.6rem;
+    font-family: 'Noto Serif';
+}
+
+.sidebar >* {
+    margin: 2px;
+}
+
+/* contents */
+.outline {
+    border: 1px solid #444;
+}
+
+.art {
+    margin: 5px;
+    border: 5px solid #c2c2c2;
+}
+
+/* footer */
+.footer {
+    background: #c2c2c2;
+    /*
+    light grey: #c2c2c2;
+    olive: #c7cc28
+    */
+}
+
+.divider {
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: 'Roboto';
+
+    height: auto;
+    margin-right: auto;
+}
+
+@media(max-width: 720px) {
+    body {
+        font-size: 10px;
+    }
+    
+    .art {
+        width: 90%;
+        height: 24em;
+    }
+}
+
+@media(min-width: 720px) {
+    body {
+        font-size: 10px;
+    }
+    
+    .art {
+        width: 24em;
+        height: 24em;
+    }
+}
+
+@media(max-width: 960px) {
+    body {
+        font-size: 10px;
+    }
+
+    .header {
+        height: 8em;
+    }
+
+    .sidebar {
+        height: auto;
+    }
+       
+    .contents {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footer {
+        height: 16em;
+    }
+}
+
+@media(min-width: 960px) {
+    body {
+        font-size: 10px;
+    }
+
+    .container {    
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 8em 1fr 16em;
+        grid-template-areas:
+        "hd hd hd hd hd"
+        "sd main main main main"
+        "ft ft ft ft ft";
+        justify-content: center;
+    }
+
+    .header {
+        grid-area: hd;       
+    }
+    
+    .first {
+        grid-area: sd;
+    }
+
+    .second {
+        grid-area: main;
+    }
+
+    .contents {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .art {
+        width: 40%;
+        height: 24em;
+    }
+
+    .footer {
+        grid-area: ft;
+    }
+}
