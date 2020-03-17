@@ -18,6 +18,11 @@ body {
     width: 100%;
 }
 
+.divider {
+    height: auto;
+    margin-right: auto;
+}
+
 /* header */
 .header {    
     display: flex;
@@ -57,14 +62,22 @@ body {
 }
 
 /* footer */
+.auther {
+    font-size: 16px;
+}
+
 .footer {
     height: 160px;
     background: #c7cc28;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.divider {
-    height: auto;
-    margin-right: auto;
+.sns-list {
+    list-style: none;
 }
 
 @media(max-width: 620px) {
@@ -155,9 +168,27 @@ body {
     }
 }
 
-/* contents */
+/* Portfolio */
 #smoothieup {
     background-image: url(../img/smoothieup.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+#moneyflow {
+    background-image: url(../img/moneyflow.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+#coffeeroad {
+    background-image: url(../img/coffeeroad.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+#mobilepayment {
+    background-image: url(../img/mobilepayment.png);
     background-size: cover;
     background-position: 50%;
 }

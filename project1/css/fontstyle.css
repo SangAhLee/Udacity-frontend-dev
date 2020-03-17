@@ -1,4 +1,14 @@
-@import url(https://weloveiconfonts.com/api/?family=fontawesome);
+@import url(https://weloveiconfonts.com/api/?family=fontawesome|zocial);
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
 
 html {
     font-size: 16px; 
@@ -23,5 +33,5 @@ h2 {
 }
 
 h3 { 
-    font-size: 1.17rem; 
+    font-size: 1.17rem;
 }
