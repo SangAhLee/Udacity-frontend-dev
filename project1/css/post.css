@@ -1,6 +1,6 @@
 @import url(fontstyle.css);
 
-body {    
+body {
     width: 100vw;
     height: auto;
     background: #fffff8;
@@ -30,7 +30,7 @@ table {
 }
 
 /* header */
-.header {    
+.header {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -45,10 +45,9 @@ table {
     margin: 10px;
 }
 
-.header>div:nth-child(1) {    
+.header>div:nth-child(1) {
     margin-right: auto;
 }
-
 
 /* sidebar */
 .sidebar {
@@ -72,7 +71,7 @@ table {
 
 .imgbox {
     width: auto;
-    height: auto;    
+    height: auto;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -96,7 +95,6 @@ table {
 .footer {
     height: 160px;
     background: #c7cc28;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,16 +123,16 @@ table {
     .title-img {
         width: 60%;
         height: auto;
-    }    
+    }
 }
 
 @media(min-width: 920px) {
     .title-img {
         width: 50%;
         height: auto;
-    }    
+    }
 }
 
-article {    
+article {
     font-family: 'Noto Serif';
 }

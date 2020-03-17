@@ -1,6 +1,6 @@
 @import url(fontstyle.css);
 
-body {    
+body {
     width: 100vw;
     height: auto;
     background: #fffff8;
@@ -24,7 +24,7 @@ body {
 }
 
 /* header */
-.header {    
+.header {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -43,7 +43,7 @@ body {
  }
 
 /* sidebar */
-.sidebar {    
+.sidebar {
     font-family: 'Noto Serif';
 }
 
@@ -69,7 +69,6 @@ body {
 .footer {
     height: 160px;
     background: #c7cc28;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,14 +86,14 @@ body {
     }
 }
 
-@media(min-width: 620px) {    
+@media(min-width: 620px) {
     .art {
         width: 70vw;
         height: 300px;
     }
 }
 
-@media(min-width: 800px) {    
+@media(min-width: 800px) {
     .art {
         width: 40vw;
         height: 300px;
@@ -128,7 +127,7 @@ body {
         font-size: 10px;
     }
 
-    .container {    
+    .container {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 80px 1fr 160px;
@@ -140,7 +139,7 @@ body {
     }
 
     .header {
-        grid-area: hd;       
+        grid-area: hd;
     }
     
     .first {
