@@ -1,0 +1,27 @@
+@import url(https://weloveiconfonts.com/api/?family=fontawesome);
+
+html {
+    font-size: 16px; 
+    font-family: 'Roboto', 'Noto Serif','Noto Sans KR', serif, sans-serif;
+}
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+  }
+
+p {
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 { 
+    font-size: 1.17rem; 
+}

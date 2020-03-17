@@ -5,42 +5,48 @@
         <meta name="viewport" content="width=dievice-width, initial-scale=1.0"/>
 
         <title>SangAh Lee</title>
-        <link href="./css/post.css" rel="stylesheet" type="text/css"/>
+        <link href="./css/post.css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="container">
             <div class="header box">
-                <div><h1>Home</h1></div>
-                <div><h1>Menu1</h1></div>
-                <div><h1>Menu2</h1></div>
-                <div><h1>Menu3</h1></div>
+                <a href="./index.html">
+                    <div class="header home">Home</div>
+                </a>
+                <div class="header Menu1">Menu1</div>
+                <div class="header Menu2">Menu2</div>
+                <div class="header Menu3">Menu3</div>
             </div>
 
             <div class="sidebar box">
-                <div>
-                    <a href="./index.html">Back to the Main Page</a>
+                <div class="back link">
+                    <a href="./index.html" class="back link">
+                        <span class="fontawesome-arrow-left cc_pointer">Back to the Main Page</span>
+                    </a>
                 </div>
             </div>
 
             <div class="post box">
-                <h1>Post Title</h1>
+                <h1>Smoothie Up!</h1>
 
                 <div class="imgbox innerbox">
-                    <img class="titleimg" src="./img/smoothieup.png" alt="Smoothieup main image">
+                    <figure>
+                        <img class="title-img" src="./img/smoothieup.png" alt="Smoothieup main image">
+                        <figcaption>Smoothie Up!</figcaption>
+                    </figure>                    
                 </div>
                 <div class="overview innerbox">
-                    Project Overview<br><br>
+                    <p>Project Overview<br><br>
                     Title: Smoothie Up!<br>
                     Date: May.20 – June.16, 2019<br>
                     Type: Homepage UX/UI Design<br>
                     Project Members: Personal Project<br>
-                    Role: Ideation, Information Architecture, UI design(Wireframing, Flow design)<br>
+                    Role: Ideation, Information Architecture, UI design(Wireframing, Flow design)<br></p>
                 </div>
-
-                
             </div>
+            <div class="footer box"></div>
         </div>
     </body>
 </html>
