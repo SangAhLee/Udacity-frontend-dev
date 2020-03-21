@@ -1,21 +1,6 @@
 @import url(fontstyle.css);
 @import url(commoncolor.css);
 @import url(commonlayout.css);
-/*
-body {
-    width: 100vw;
-    height: auto;
-    background: #fffff8;
-    color:#444;
-    padding: 1px;
-    display: flex;
-    font-family: 'Roboto';
-}
-
-a {
-    text-decoration: none;
-}
-*/
 
 table {
     border-color: #545454;
@@ -31,26 +16,6 @@ table {
     width: 100%;
     border: 1px solid #444;
 }
-
-/* header
-.header {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    background: #0b504f;
-    color: white;
-    height: 80px;
-    font-size: 1rem;
-}
-
-.header >* {
-    margin: 10px;
-}
-
-.header>div:nth-child(1) {
-    margin-right: auto;
-} */
 
 /* sidebar */
 .sidebar {
@@ -90,25 +55,6 @@ table {
     margin-left: 10px;
 }
 
-/* footer 
-.auther {
-    font-size: 16px;
-}
-
-.footer {
-    height: 160px;
-    background: #c7cc28;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.sns-list {
-    list-style: none;
-}
-*/
-
 @media(max-width: 620px) {
     .title-img {
         width: 90%;
@@ -135,8 +81,4 @@ table {
         width: 50%;
         height: auto;
     }
-}
-
-article {
-    font-family: 'Noto Serif';
 }

@@ -45,3 +45,8 @@ a {
 .sns-list {
     list-style: none;
 }
+
+/* contents-body */
+article {
+    font-family: 'Noto Serif';
+}
