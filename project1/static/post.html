@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 
-<head>
+<header>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=dievice-width, initial-scale=1.0" />
 
@@ -9,18 +9,18 @@
     <link href="../css/post.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-</head>
+</header>
 
 <body>
     <div class="container">
-        <div class="header box">
+        <nav class="nav box">
             <a href="../index.html">
-                <div class="header home">Home</div>
+                <div class="nav home">Home</div>
             </a>
-            <div class="header Menu1">Menu1</div>
-            <div class="header Menu2">Menu2</div>
-            <div class="header Menu3">Menu3</div>
-        </div>
+            <div class="nav Menu1">Menu1</div>
+            <div class="nav Menu2">Menu2</div>
+            <div class="nav Menu3">Menu3</div>
+        </nav>
 
         <div class="sidebar box">
             <div class="back link">
@@ -32,7 +32,30 @@
 
         <div class="post box">
             <h1>Smoothie Up</h1>
-            <p>Updated: March 18, 2020 by SangAh Lee (Ivory)</p>
+            <aside class="sns-share">
+
+                <p class="post-date'">Updated: March 18, 2020 | </p>
+
+                <div class="sns-share">
+                    <p>Social Share</p>
+                    <a class="fontawesome-facebook" href="#"
+                        onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                        target="_blank" alt="Share on Facebook"></a>
+                    <a class="fontawesome-twitter" href="#"
+                        onclick="javascript:window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                        target="_blank" alt="Share on Twitter"></a>
+                    <a class="fontawesome-linkedin" href="#"
+                        onclick="javascript:window.open('https://www.linkedin.com/shareArticle?mini=true&url=' +encodeURIComponent(document.URL)+'&title='+encodeURIComponent(document.title), 'linkedinsharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+                        target="_blank" alt="Share on Twitter"></a>
+                </div>
+            </aside>
+
+            <aside class="post-auther">
+                <img class="post-auther-avata" src="../img/mylogo.png" alt="SangAh Lee (Ivory)">
+                <p class="post-auther-info">SangAh Lee (Ivory)<br />
+                    UX designer/engineer | Bolki Company<br />
+                    learning web development these days.</p>
+            </aside>
 
             <div class="imgbox innerbox">
                 <figure>
@@ -139,14 +162,29 @@
 
             </article>
         </div>
-        <div class="footer box">
-            <h1 class="auther">SangAh Lee (Ivory)</h1>
-            <ul class="sns-list">
-                <li class="zocial-linkedin"></li>
-                <li class="zocial-github"><a href="https://github.com/SangAhLee" target="_blank"></a></li>
-                <li class="fontawesome-edit"><a href="https://medium.com/@ivorylee718" target="_blank"></a></li>
-            </ul>
-        </div>
+
+        <footer class="footer box">
+
+            <div class="biz-card">
+                <div class="biz-card-header">
+                    <h1 class="auther">SangAh Lee (Ivory)</h1>
+                </div>
+
+                <div class="biz-card-body">
+                    <p class="biz-card-title">UX Designer/Engineer</p>
+                    <p class="biz-card-text">User-centered design & Problem solving</p>
+
+                    <ul class="sns-list">
+                        <li>
+                            <a class="zocial-github" href="https://github.com/SangAhLee" target="_blank"></a>
+                        </li>
+                        <li>
+                            <a class="fontawesome-edit" href="https://medium.com/@ivorylee718" target="_blank"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 

@@ -3,9 +3,7 @@ body {
     color: #444;
 }
 
-/* header */
-
-.header {
+.nav {
     background: #0b504f;
     color: white;
 }

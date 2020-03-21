@@ -37,3 +37,29 @@ h2 {
 h3 {
   font-size: 1.17rem;
 }
+
+article {
+  font-family: 'Noto Serif';
+}
+
+.post-auther-info {
+  font-size: 13px;
+}
+
+/* footer */
+
+.auther {
+  font-size: 16px;
+}
+
+.biz-card-title {
+  font-size: 13px;
+}
+
+.biz-card-text {
+  font-size: 12px;
+}
+
+.sns-list {
+  font-size: 20px;
+}
