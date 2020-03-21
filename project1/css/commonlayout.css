@@ -11,6 +11,7 @@ a {
 }
 
 /* header */
+
 .header {
     display: flex;
     flex-direction: row;
@@ -20,7 +21,7 @@ a {
     font-size: 1rem;
 }
 
-.header >* {
+.header>* {
     margin: 10px;
 }
 
@@ -28,8 +29,8 @@ a {
     margin-right: auto;
 }
 
-
 /* footer */
+
 .auther {
     font-size: 16px;
 }
@@ -47,6 +48,7 @@ a {
 }
 
 /* contents-body */
+
 article {
     font-family: 'Noto Serif';
 }

@@ -1,7 +1,6 @@
 @import url(fontstyle.css);
 @import url(commoncolor.css);
 @import url(commonlayout.css);
-
 table {
     border-color: #545454;
     border-collapse: collapse;
@@ -18,15 +17,17 @@ table {
 }
 
 /* sidebar */
+
 .sidebar {
     font-size: 1rem;
 }
 
-.sidebar >* {
+.sidebar>* {
     margin: 20px 2px 20px 2px;
 }
 
 /* contents*/
+
 .post {
     font-family: 'Noto Serif';
 }

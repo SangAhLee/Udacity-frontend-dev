@@ -1,7 +1,6 @@
 @import url(fontstyle.css);
 @import url(commoncolor.css);
 @import url(commonlayout.css);
-
 .container {
     width: 90%;
 }
@@ -16,15 +15,17 @@
 }
 
 /* sidebar */
+
 .sidebar {
     font-family: 'Noto Serif';
 }
 
-.sidebar >* {
+.sidebar>* {
     margin: 2px;
 }
 
 /* contents */
+
 .outline {
     border: 1px solid #444;
 }
@@ -59,15 +60,12 @@
     body {
         font-size: 10px;
     }
-
     .header {
         height: 80px;
     }
-
     .sidebar {
         height: auto;
     }
-       
     .contents {
         height: auto;
         display: flex;
@@ -81,42 +79,32 @@
     body {
         font-size: 10px;
     }
-
     .container {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 80px 1fr 160px;
-        grid-template-areas:
-        "hd hd hd hd hd"
-        "sd sd main main main"
-        "ft ft ft ft ft";
+        grid-template-areas: "hd hd hd hd hd" "sd sd main main main" "ft ft ft ft ft";
         justify-content: center;
     }
-
     .header {
         grid-area: hd;
     }
-    
     .first {
         grid-area: sd;
     }
-
     .second {
         grid-area: main;
     }
-
     .contents {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
     }
-
     .art {
         width: 300px;
         height: 300px;
     }
-
     .footer {
         grid-area: ft;
     }
@@ -126,20 +114,17 @@
     body {
         font-size: 10px;
     }
-
     .container {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: 80px 1fr 160px;
-        grid-template-areas:
-        "hd hd hd hd hd"
-        "sd main main main main"
-        "ft ft ft ft ft";
+        grid-template-areas: "hd hd hd hd hd" "sd main main main main" "ft ft ft ft ft";
         justify-content: center;
     }
 }
 
 /* Portfolio */
+
 #smoothieup {
     background-image: url(../img/smoothieup.png);
     background-size: cover;
