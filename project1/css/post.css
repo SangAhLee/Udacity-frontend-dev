@@ -1,5 +1,7 @@
 @import url(fontstyle.css);
-
+@import url(commoncolor.css);
+@import url(commonlayout.css);
+/*
 body {
     width: 100vw;
     height: auto;
@@ -13,6 +15,7 @@ body {
 a {
     text-decoration: none;
 }
+*/
 
 table {
     border-color: #545454;
@@ -29,7 +32,7 @@ table {
     border: 1px solid #444;
 }
 
-/* header */
+/* header
 .header {
     display: flex;
     flex-direction: row;
@@ -47,7 +50,7 @@ table {
 
 .header>div:nth-child(1) {
     margin-right: auto;
-}
+} */
 
 /* sidebar */
 .sidebar {
@@ -87,7 +90,7 @@ table {
     margin-left: 10px;
 }
 
-/* footer */
+/* footer 
 .auther {
     font-size: 16px;
 }
@@ -104,6 +107,7 @@ table {
 .sns-list {
     list-style: none;
 }
+*/
 
 @media(max-width: 620px) {
     .title-img {

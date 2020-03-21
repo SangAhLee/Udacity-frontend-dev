@@ -1,0 +1,47 @@
+body {
+    width: 100vw;
+    height: auto;
+    padding: 1px;
+    display: flex;
+    font-family: 'Roboto';
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 80px;
+    font-size: 1rem;
+}
+
+.header >* {
+    margin: 10px;
+}
+
+.header>div:nth-child(1) {
+    margin-right: auto;
+}
+
+
+/* footer */
+.auther {
+    font-size: 16px;
+}
+
+.footer {
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sns-list {
+    list-style: none;
+}

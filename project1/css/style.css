@@ -1,5 +1,8 @@
 @import url(fontstyle.css);
+@import url(commoncolor.css);
+@import url(commonlayout.css);
 
+/*
 body {
     width: 100vw;
     height: auto;
@@ -9,6 +12,7 @@ body {
     display: flex;
     font-family: 'Roboto';
 }
+*/
 
 .container {
     width: 90%;
@@ -23,7 +27,7 @@ body {
     margin-right: auto;
 }
 
-/* header */
+/* header 
 .header {
     display: flex;
     flex-direction: row;
@@ -41,6 +45,7 @@ body {
 .header>div:nth-child(1) {    
     margin-right: auto;
  }
+ */
 
 /* sidebar */
 .sidebar {
@@ -61,7 +66,7 @@ body {
     border: 1px solid #c2c2c2;
 }
 
-/* footer */
+/* footer 
 .auther {
     font-size: 16px;
 }
@@ -78,6 +83,7 @@ body {
 .sns-list {
     list-style: none;
 }
+*/
 
 @media(max-width: 620px) {
     .art {
