@@ -1,13 +1,11 @@
 # Landing Page Project
 
-## Table of Contents
+## Introductions
 
-* [Instructions](#instructions)
+This is the second project of Udacity 'Front End Developer' Nanodegree Program.
+The purpose of this project is to understand HTML and CSS styling and the relationship between JS and them by building the Landing Page. I converted the original static project to an interactive one.
 
-## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## License
 
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+The contents of this repository are covered under the MIT License.
