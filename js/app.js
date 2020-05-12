@@ -17,7 +17,8 @@
  * Define Global Variables
  * 
 */
-
+var sections_list = document.getElementsByTagName('section');
+const navbar_element = document.getElementById('navbar__list');
 
 /**
  * End Global Variables
@@ -33,25 +34,45 @@
  * 
 */
 
-// build the nav
-var nav = document.createElement("nav");
-
-
 // Add class 'active' to section when near top of viewport
 
-function active(clicked_id) {
-    var elements = document.getElementsByClassName("your-active-class");
+document.addEventListener("DOMContentLoaded", function () {
+    func_active();
+});
 
-    console.log(elements);
+function func_active() {
 
-    for (var i = 0; i < elements.length; i++) {
-        elements[i].classList.remove('your-active-class');
+    var menus = document.getElementsByClassName('menu__link');
+
+    for (let i = 0; i < 4; i++) {
+        console.log(i);
+        menus[i].addEventListener('click', function click_nav(event) {
+            var sub_menus = document.getElementsByClassName('menu__link');
+            for (let j = 0; j < 4; j++) {
+                sub_menus[j].classList.remove("active");
+            }
+
+
+            var nav_clicked = event.target;
+            nav_clicked.classList.add("active");
+            console.log('[active]' + nav_clicked.innerText);
+
+
+        });
     }
+    /*
+    navbar_li.addEventListener('click', function click_nav(event){
+        
+        var nav_clicked = event.target;
 
-    console.log("clicked id = " + clicked_id);
- 
-    var element2 = document.getElementById(clicked_id);
-    element2.classList.add("your-active-class");
+        console.log('hey ' + event.target);
+     /*   for(i=0; i<navbar_li.length; i++) {
+            navbar_li[i].classList.remove("active");            
+        }
+        navbar_li.removeClass("active");
+     
+        this.classList.add("active");
+    }); */
 }
 
 // Scroll to anchor ID using scrollTO event
@@ -64,84 +85,38 @@ function active(clicked_id) {
 */
 
 // Build menu
-const navbar_element = document.getElementById('navbar__list');
 
 var fragment = document.createDocumentFragment();
 
 
 for (let i = 1; i <= 4; i++) {
-  //  newElement = newElement + '<li><a href="#Section' + i + '"></li>';
-  var newElement = document.createElement("li");
- newElement.innerHTML = '<a href="#Section ' + i+ '">';
- newElement.innerText = 'Section ' + i;
- newElement.classList.add("menu__link");
+    //  newElement = newElement + '<li><a href="#Section' + i + '"></li>';
+    var newElement = document.createElement("li");
+    newElement.innerHTML = '<a href="#Section ' + i + '">';
+    newElement.innerText = 'Section ' + i;
+    newElement.classList.add("menu__link");
 
- console.log(newElement.innerHTML + ' ---' + i);
     /*
         const linka = document.createElement('a');
         newElement.append('<a href="#Section"+i>''Section''+i</a>'); */
 
-    newElement.addEventListener('click', function moveToAnchor(event){
+    newElement.addEventListener('click', function moveToAnchor(event) {
         var nav_clicked = event.target;
 
-        var sections_list = document.getElementsByTagName('section');
-        console.log('sections_list =' + sections_list + '  length=' + sections_list.length);
-        for(var i=0; i<sections_list.length; i++) {           
-            console.log('sections_list[' + i + '].dataset.nav = ' + sections_list[i].dataset.nav);
-            if(sections_list[i].dataset.nav == nav_clicked.innerText) {
-                sections_list[i].scrollIntoView(true);
-                break;
+        for (var i = 0; i < sections_list.length; i++) {
+            if (sections_list[i].dataset.nav == nav_clicked.innerText) {
+                console.log('[MoveTo]' + sections_list[i].dataset.nav);
+                sections_list[i].classList.add("your-active-class");
+                sections_list[i].scrollIntoView({ behavior: "smooth" });
+            } else {
+                sections_list[i].classList.remove("your-active-class");
             }
-        }    
+        }
     });
 
     fragment.appendChild(newElement);
 
-    console.log('Navigation Section' + i);
+    console.log('[Nav bar Created] Section' + i);
 }
 //navbar_element.innerHTML = newElement;
 navbar_element.appendChild(fragment);
-/*
-
-const links = document.querySelectorAll('input');
-const thirdField = links[2];
-
-thirdField.addEventListener('keypress', function handleKeyPresses(event) {
-    console.log('a key was pressed');
-});
-
-
-
-const links = document.querySelectorAll('a');
-const thirdLink = links[2];
-
-thirdLink.addEventListener('click', function (event) {
-    event.preventDefault();
-    console.log("Look, ma! We didn't navigate to a new page!");
-});
-
-
-
-function showDetails(animal) {
-    var animalType = animal.getAttribute("data-animal-type");
-    alert("The " + animal.innerHTML + " is a " + animalType + ".");
-}
-*/
-
-
-// Scroll to section on link click
-
-// Set sections as active
-
-/* don't knowwwww
-var sections = document.getElementsByName("section");
-for(var i=0; i<sections.length; i++) {
-    sections[i].class
-}
-*/
-
-/*
-document.addEventListener('click', function(){
-    console.log('I am a cucumberpooh!')
-});
-*/
