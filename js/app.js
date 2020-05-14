@@ -17,8 +17,11 @@
  * Define Global Variables
  * 
 */
-var sections_list = document.getElementsByTagName('section');
+const sections = document.getElementsByTagName('section');
 const navbar_element = document.getElementById('navbar__list');
+const menus = document.getElementsByClassName('menu__link');
+
+const NONE = -1;
 
 /**
  * End Global Variables
@@ -26,7 +29,17 @@ const navbar_element = document.getElementById('navbar__list');
  * 
 */
 
+document.addEventListener("DOMContentLoaded", function () {
+    setMenusClickEvent();
+});
 
+function setMenusClickEvent() {
+    for (let i = 0; i < sections.length; i++) {
+        menus[i].addEventListener('click', function click_nav(event) {
+            moveToAnchor(event);
+        });
+    }
+}
 
 /**
  * End Helper Functions
@@ -36,47 +49,50 @@ const navbar_element = document.getElementById('navbar__list');
 
 // Add class 'active' to section when near top of viewport
 
-document.addEventListener("DOMContentLoaded", function () {
-    func_active();
-});
-
-function func_active() {
-
-    var menus = document.getElementsByClassName('menu__link');
-
-    for (let i = 0; i < 4; i++) {
-        console.log(i);
-        menus[i].addEventListener('click', function click_nav(event) {
-            var sub_menus = document.getElementsByClassName('menu__link');
-            for (let j = 0; j < 4; j++) {
-                sub_menus[j].classList.remove("active");
-            }
-
-
-            var nav_clicked = event.target;
-            nav_clicked.classList.add("active");
-            console.log('[active]' + nav_clicked.innerText);
-
-
-        });
-    }
-    /*
-    navbar_li.addEventListener('click', function click_nav(event){
-        
-        var nav_clicked = event.target;
-
-        console.log('hey ' + event.target);
-     /*   for(i=0; i<navbar_li.length; i++) {
-            navbar_li[i].classList.remove("active");            
+window.addEventListener('scroll', function (event) {
+    for (let i = 0; i < sections.length; i++) {
+        if (isInViewport(sections[i])) {
+            // setting the "active" status
+            setActiveClass(i);
         }
-        navbar_li.removeClass("active");
-     
-        this.classList.add("active");
-    }); */
-}
+    }
+}, false);
+
+let isInViewport = function (elem) {
+    let bounding = elem.getBoundingClientRect();
+    return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+};
 
 // Scroll to anchor ID using scrollTO event
+function moveToAnchor(event) {
+    let nav_clicked = event.target;
 
+    for (let i = 0; i < sections.length; i++) {
+        if (sections[i].dataset.nav == nav_clicked.innerText) {
+            setActiveClass(i);
+            sections[i].scrollIntoView({ behavior: "smooth" });
+            break;
+        }
+    }
+}
+
+function setActiveClass(count) {
+
+    for (let i = 0; i < sections.length; i++) {
+        menus[i].classList.remove("active");
+        sections[i].classList.remove("your-active-class");
+    }
+    if (count != NONE) {
+        menus[count].classList.add("active");
+        sections[count].classList.add("your-active-class");
+        console.log('[Active] Section' + count);
+    }
+}
 
 /**
  * End Main Functions
@@ -84,39 +100,21 @@ function func_active() {
  * 
 */
 
-// Build menu
+// Build navbar
 
-var fragment = document.createDocumentFragment();
+let fragment = document.createDocumentFragment();
 
-
-for (let i = 1; i <= 4; i++) {
-    //  newElement = newElement + '<li><a href="#Section' + i + '"></li>';
-    var newElement = document.createElement("li");
+for (let i = 1; i <= sections.length; i++) {
+    let newElement = document.createElement("li");
     newElement.innerHTML = '<a href="#Section ' + i + '">';
     newElement.innerText = 'Section ' + i;
     newElement.classList.add("menu__link");
 
-    /*
-        const linka = document.createElement('a');
-        newElement.append('<a href="#Section"+i>''Section''+i</a>'); */
-
-    newElement.addEventListener('click', function moveToAnchor(event) {
-        var nav_clicked = event.target;
-
-        for (var i = 0; i < sections_list.length; i++) {
-            if (sections_list[i].dataset.nav == nav_clicked.innerText) {
-                console.log('[MoveTo]' + sections_list[i].dataset.nav);
-                sections_list[i].classList.add("your-active-class");
-                sections_list[i].scrollIntoView({ behavior: "smooth" });
-            } else {
-                sections_list[i].classList.remove("your-active-class");
-            }
-        }
-    });
-
     fragment.appendChild(newElement);
+    console.log('[UI] Navbar Created: Section' + i);
 
-    console.log('[Nav bar Created] Section' + i);
+    if (1 == i) {
+        newElement.classList.add("active");
+    }
 }
-//navbar_element.innerHTML = newElement;
 navbar_element.appendChild(fragment);
