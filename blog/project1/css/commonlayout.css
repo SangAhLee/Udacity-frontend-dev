@@ -1,0 +1,90 @@
+body {
+    width: 100vw;
+    height: auto;
+    padding: 1px;
+    display: flex;
+    font-family: 'Roboto';
+}
+
+a {
+    text-decoration: none;
+}
+
+/* navigation */
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    height: 80px;
+    font-size: 1rem;
+}
+
+.nav>* {
+    margin: 10px;
+}
+
+.nav>div:nth-child(1) {
+    margin-right: auto;
+}
+
+/* contents-body */
+
+section {
+    border: 1px solid #444;
+}
+
+.sns-share {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.sns-share>* {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
+.post-auther {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.post-auther-avata {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+/* footer */
+
+.footer {
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.biz_card {
+    margin: 0 0 0 10px;
+}
+
+.sns-list {
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+}
+
+.sns-list>li {
+    display: inline-block;
+    padding: 10px;
+}

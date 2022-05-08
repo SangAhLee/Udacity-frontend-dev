@@ -1,0 +1,153 @@
+@import url(fontstyle.css);
+@import url(commoncolor.css);
+@import url(commonlayout.css);
+.container {
+    width: 90%;
+}
+
+.box {
+    width: 100%;
+}
+
+.divider {
+    height: auto;
+    margin-right: auto;
+}
+
+/* sidebar */
+
+.sidebar {
+    font-family: 'Noto Serif';
+}
+
+.sidebar>* {
+    margin: 2px;
+}
+
+/* contents */
+
+.card {
+    margin: 5px;
+    border: 1px solid #c2c2c2;
+    position: relative;
+}
+
+.card-bottom {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media(max-width: 620px) {
+    .card {
+        width: 80vw;
+        height: 300px;
+    }
+}
+
+@media(min-width: 620px) {
+    .card {
+        width: 70vw;
+        height: 300px;
+    }
+}
+
+@media(min-width: 800px) {
+    .card {
+        width: 40vw;
+        height: 300px;
+    }
+}
+
+@media(max-width: 960px) {
+    body {
+        font-size: 10px;
+    }
+    .nav {
+        height: 80px;
+    }
+    .sidebar {
+        height: auto;
+    }
+    .contents {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 960px) {
+    body {
+        font-size: 10px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 80px 1fr 160px;
+        grid-template-areas: "hd hd hd hd hd" "sd sd main main main" "ft ft ft ft ft";
+        justify-content: center;
+    }
+    .nav {
+        grid-area: hd;
+    }
+    .first {
+        grid-area: sd;
+    }
+    .second {
+        grid-area: main;
+    }
+    .contents {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .card {
+        width: 300px;
+        height: 300px;
+    }
+    .footer {
+        grid-area: ft;
+    }
+}
+
+@media(min-width: 1300px) {
+    body {
+        font-size: 10px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 80px 1fr 160px;
+        grid-template-areas: "hd hd hd hd hd" "sd main main main main" "ft ft ft ft ft";
+        justify-content: center;
+    }
+}
+
+/* Portfolio */
+
+#smoothieup {
+    background-image: url(../img/smoothieup.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+#moneyflow {
+    background-image: url(../img/moneyflow.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+#coffeeroad {
+    background-image: url(../img/coffeeroad.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+#mobilepayment {
+    background-image: url(../img/mobilepayment.png);
+    background-size: cover;
+    background-position: 50%;
+}

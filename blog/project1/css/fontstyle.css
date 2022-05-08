@@ -1,0 +1,65 @@
+@import url(https://weloveiconfonts.com/api/?family=fontawesome|zocial);
+/* fontawesome */
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* zocial */
+
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Roboto', 'Noto Serif', 'Noto Sans KR', serif, sans-serif;
+}
+
+/* fontawesome */
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+article {
+  font-family: 'Noto Serif';
+}
+
+.post-auther-info {
+  font-size: 13px;
+}
+
+/* footer */
+
+.auther {
+  font-size: 16px;
+}
+
+.biz-card-title {
+  font-size: 13px;
+}
+
+.biz-card-text {
+  font-size: 12px;
+}
+
+.sns-list {
+  font-size: 20px;
+}
